@@ -40,7 +40,8 @@ class ExampleApp extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  ElegantNotification.success(
+                  ElegantNotification(
+                    icon: SizedBox(),
                     width: 360,
                     isDismissable: false,
                     stackedOptions: StackedOptions(
@@ -85,7 +86,8 @@ class ExampleApp extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  ElegantNotification.error(
+                  ElegantNotification(
+                    icon: SizedBox(),
                     width: 360,
                     stackedOptions: StackedOptions(
                       key: 'topRight',
@@ -125,7 +127,8 @@ class ExampleApp extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  ElegantNotification.info(
+                  ElegantNotification(
+                    icon: SizedBox(),
                     width: 360,
                     stackedOptions: StackedOptions(
                       key: 'left',
@@ -214,7 +217,8 @@ class ExampleApp extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  ElegantNotification.info(
+                  ElegantNotification(
+                    icon: SizedBox(),
                     width: 360,
                     position: Alignment.bottomLeft,
                     animation: AnimationType.fromLeft,
@@ -350,7 +354,8 @@ class ExampleApp extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  ElegantNotification.success(
+                  ElegantNotification(
+                    icon: SizedBox(),
                     key: const Key('value'),
                     description: const Text(
                       'Your account has been created succesfully',

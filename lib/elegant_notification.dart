@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:elegant_notification/resources/arrays.dart';
 import 'package:elegant_notification/resources/colors.dart';
 import 'package:elegant_notification/resources/constants.dart';
@@ -47,129 +46,8 @@ class ElegantNotification extends StatefulWidget {
     this.progressIndicatorBackground = greyColor,
     this.onNotificationPressed,
     this.animationCurve = Curves.ease,
-    this.shadow,
   }) : super(key: key) {
     _notificationType = NotificationType.custom;
-    checkAssertions();
-  }
-
-  ElegantNotification.success({
-    super.key,
-    this.title,
-    required this.description,
-    this.background = Colors.white,
-    this.closeButton,
-    this.stackedOptions,
-    this.notificationMargin = 20,
-    this.toastDuration = const Duration(milliseconds: 3000),
-    this.displayCloseButton = true,
-    this.onCloseButtonPressed,
-    this.onProgressFinished,
-    this.iconSize = defaultIconSize,
-    this.position = Alignment.topRight,
-    this.animation = AnimationType.fromRight,
-    this.animationDuration = const Duration(milliseconds: 600),
-    this.showProgressIndicator = true,
-    this.action,
-    this.autoDismiss = true,
-    this.height,
-    this.width,
-    this.progressBarHeight,
-    this.progressBarWidth,
-    this.progressBarPadding,
-    this.onDismiss,
-    this.isDismissable = true,
-    this.dismissDirection = DismissDirection.horizontal,
-    this.progressIndicatorBackground = greyColor,
-    this.onNotificationPressed,
-    this.animationCurve = Curves.ease,
-    this.shadow,
-    this.borderRadius,
-    this.border,
-  }) {
-    _notificationType = NotificationType.success;
-    progressIndicatorColor = _notificationType.color();
-    icon = null;
-    checkAssertions();
-  }
-
-  ElegantNotification.error({
-    super.key,
-    this.title,
-    required this.description,
-    this.background = Colors.white,
-    this.closeButton,
-    this.stackedOptions,
-    this.notificationMargin = 20,
-    this.toastDuration = const Duration(milliseconds: 3000),
-    this.displayCloseButton = true,
-    this.onCloseButtonPressed,
-    this.onProgressFinished,
-    this.iconSize = defaultIconSize,
-    this.position = Alignment.topRight,
-    this.animation = AnimationType.fromRight,
-    this.animationDuration = const Duration(milliseconds: 600),
-    this.showProgressIndicator = true,
-    this.action,
-    this.autoDismiss = true,
-    this.height,
-    this.width,
-    this.progressBarHeight,
-    this.progressBarWidth,
-    this.progressBarPadding,
-    this.onDismiss,
-    this.isDismissable = true,
-    this.dismissDirection = DismissDirection.horizontal,
-    this.progressIndicatorBackground = greyColor,
-    this.onNotificationPressed,
-    this.animationCurve = Curves.ease,
-    this.shadow,
-    this.borderRadius,
-    this.border,
-  }) {
-    _notificationType = NotificationType.error;
-    progressIndicatorColor = _notificationType.color();
-    icon = null;
-    checkAssertions();
-  }
-
-  ElegantNotification.info({
-    super.key,
-    this.title,
-    required this.description,
-    this.background = Colors.white,
-    this.closeButton,
-    this.stackedOptions,
-    this.notificationMargin = 20,
-    this.toastDuration = const Duration(milliseconds: 3000),
-    this.displayCloseButton = true,
-    this.onCloseButtonPressed,
-    this.onProgressFinished,
-    this.iconSize = defaultIconSize,
-    this.position = Alignment.topRight,
-    this.animation = AnimationType.fromRight,
-    this.animationDuration = const Duration(milliseconds: 600),
-    this.showProgressIndicator = true,
-    this.action,
-    this.autoDismiss = true,
-    this.height,
-    this.width,
-    this.progressBarHeight,
-    this.progressBarWidth,
-    this.progressBarPadding,
-    this.onDismiss,
-    this.isDismissable = true,
-    this.dismissDirection = DismissDirection.horizontal,
-    this.progressIndicatorBackground = greyColor,
-    this.onNotificationPressed,
-    this.animationCurve = Curves.ease,
-    this.shadow,
-    this.borderRadius,
-    this.border,
-  }) {
-    _notificationType = NotificationType.info;
-    progressIndicatorColor = _notificationType.color();
-    icon = null;
     checkAssertions();
   }
 
@@ -187,47 +65,35 @@ class ElegantNotification extends StatefulWidget {
 
     if (position == Alignment.centerRight) {
       assert(
-        animation != AnimationType.fromLeft &&
-            animation != AnimationType.fromBottom &&
-            animation != AnimationType.fromTop,
+        animation != AnimationType.fromLeft && animation != AnimationType.fromBottom && animation != AnimationType.fromTop,
       );
     } else if (position == Alignment.centerLeft) {
       assert(
-        animation != AnimationType.fromRight &&
-            animation != AnimationType.fromBottom &&
-            animation != AnimationType.fromTop,
+        animation != AnimationType.fromRight && animation != AnimationType.fromBottom && animation != AnimationType.fromTop,
       );
     } else if (position == Alignment.topCenter) {
       assert(
-        animation != AnimationType.fromBottom &&
-            animation != AnimationType.fromLeft &&
-            animation != AnimationType.fromRight,
+        animation != AnimationType.fromBottom && animation != AnimationType.fromLeft && animation != AnimationType.fromRight,
       );
     } else if (position == Alignment.topRight) {
       assert(
-        animation != AnimationType.fromLeft &&
-            animation != AnimationType.fromBottom,
+        animation != AnimationType.fromLeft && animation != AnimationType.fromBottom,
       );
     } else if (position == Alignment.topLeft) {
       assert(
-        animation != AnimationType.fromRight &&
-            animation != AnimationType.fromBottom,
+        animation != AnimationType.fromRight && animation != AnimationType.fromBottom,
       );
     } else if (position == Alignment.bottomCenter) {
       assert(
-        animation != AnimationType.fromTop &&
-            animation != AnimationType.fromLeft &&
-            animation != AnimationType.fromRight,
+        animation != AnimationType.fromTop && animation != AnimationType.fromLeft && animation != AnimationType.fromRight,
       );
     } else if (position == Alignment.bottomRight) {
       assert(
-        animation != AnimationType.fromLeft &&
-            animation != AnimationType.fromTop,
+        animation != AnimationType.fromLeft && animation != AnimationType.fromTop,
       );
     } else if (position == Alignment.bottomLeft) {
       assert(
-        animation != AnimationType.fromRight &&
-            animation != AnimationType.fromTop,
+        animation != AnimationType.fromRight && animation != AnimationType.fromTop,
       );
     }
   }
@@ -288,9 +154,6 @@ class ElegantNotification extends StatefulWidget {
   ///by default the duration is `3000 milliseconds`
   ///
   final Duration toastDuration;
-
-  ///The notification shadow
-  final BoxShadow? shadow;
 
   ///enable or disable the progress indicator rendering
   ///by default the indicator is displayed
@@ -381,9 +244,11 @@ class ElegantNotification extends StatefulWidget {
 
   final Key uniqueKey = UniqueKey();
 
-  String get internalKey => stackedOptions != null
-      ? '${stackedOptions?.key}%${uniqueKey.toString()}'
-      : uniqueKey.toString();
+  String get internalKey => stackedOptions != null ? '${stackedOptions?.key}%${uniqueKey.toString()}' : uniqueKey.toString();
+
+  bool get isFullWidth => width == null;
+
+  double fullWidthContainer(BuildContext context) => MediaQuery.of(context).size.width - (notificationMargin * 2);
 
   ///display the notification on the screen
   ///[context] the context of the application
@@ -420,56 +285,31 @@ class ElegantNotification extends StatefulWidget {
       .toList()
       .indexWhere((element) => element == internalKey);
 
-  double mainContainerHeight(BuildContext context) =>
-      height ?? MediaQuery.of(context).size.height * 0.12;
-  double mainContainerWidth(BuildContext context) =>
-      width ?? MediaQuery.of(context).size.width * 0.7;
+  double? mainContainerHeight(BuildContext context) => height;
+  double mainContainerWidth(BuildContext context) => width ?? fullWidthContainer(context);
 
   double getTopPos(context) {
-    if (stackedOptions?.type == StackedType.above) {
-      return -(mainContainerHeight(context) * stackedItemPosition) +
-          (stackedOptions?.itemOffset.dy ?? 0) * stackedItemPosition;
-    } else if (stackedOptions?.type == StackedType.below) {
-      return (mainContainerHeight(context) * stackedItemPosition) +
-          (stackedOptions?.itemOffset.dy ?? 0) * stackedItemPosition;
-    } else {
-      return (stackedOptions?.itemOffset.dy ?? 0) *
-          (stackOverlaysLength - 1 - stackedItemPosition);
-    }
+    return notificationMargin + (stackedOptions?.itemOffset.dy ?? 0) * stackedItemPosition;
   }
 
   double alignmentToLeftPos(BuildContext context) {
     if (position.x == 1) {
-      return MediaQuery.of(context).size.width -
-          mainContainerWidth(context) -
-          notificationMargin;
+      if (isFullWidth) {
+        return notificationMargin;
+      } else {
+        return MediaQuery.of(context).size.width - mainContainerWidth(context) - notificationMargin;
+      }
     } else if (position.x == -1) {
       return notificationMargin;
     } else {
-      return ((position.x + 1) / 2) * MediaQuery.of(context).size.width -
-          (mainContainerWidth(context) / 2);
-    }
-  }
-
-  double alignmentToTopPos(BuildContext context) {
-    if (position.y == 1) {
-      return MediaQuery.of(context).size.height -
-          mainContainerHeight(context) -
-          notificationMargin;
-    } else if (position.y == -1) {
-      return notificationMargin;
-    } else {
-      return ((position.y + 1) / 2) * MediaQuery.of(context).size.height -
-          (mainContainerHeight(context) / 2);
+      return ((position.x + 1) / 2) * MediaQuery.of(context).size.width - (notificationMargin / 2);
     }
   }
 
   double getScale() {
     if (stackedOptions?.scaleFactor != null) {
       return clampDouble(
-        (1 -
-            (stackedOptions?.scaleFactor ?? 0) *
-                (stackOverlaysLength - (stackedItemPosition + 1))),
+        (1 - (stackedOptions?.scaleFactor ?? 0) * (stackOverlaysLength - (stackedItemPosition + 1))),
         0,
         1,
       );
@@ -484,10 +324,8 @@ class ElegantNotification extends StatefulWidget {
       builder: (context) {
         return AnimatedPositioned(
           duration: const Duration(milliseconds: 300),
-          left: alignmentToLeftPos(context) +
-              (stackedOptions?.itemOffset.dx ?? 0) *
-                  (stackOverlaysLength - 1 - stackedItemPosition),
-          top: alignmentToTopPos(context) + getTopPos(context),
+          left: alignmentToLeftPos(context) + (stackedOptions?.itemOffset.dx ?? 0) * (stackOverlaysLength - 1 - stackedItemPosition),
+          top: notificationMargin + getTopPos(context),
           child: AnimatedScale(
             duration: const Duration(
               milliseconds: 300,
@@ -508,8 +346,7 @@ class ElegantNotification extends StatefulWidget {
   ElegantNotificationState createState() => ElegantNotificationState();
 }
 
-class ElegantNotificationState extends State<ElegantNotification>
-    with SingleTickerProviderStateMixin {
+class ElegantNotificationState extends State<ElegantNotification> with SingleTickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
@@ -614,69 +451,70 @@ class ElegantNotificationState extends State<ElegantNotification>
     widget.closeOverlay();
   }
 
-  double get mainContainerHeight =>
-      widget.height ?? MediaQuery.of(context).size.height * 0.12;
-  double get mainContainerWidth =>
-      widget.width ?? MediaQuery.of(context).size.width * 0.7;
+  double? get mainContainerHeight => widget.height;
+  double get mainContainerWidth => widget.width ?? MediaQuery.of(context).size.width - (widget.notificationMargin * 2);
 
   @override
   Widget build(BuildContext context) {
+    double borderRadiusValue = widget.borderRadius?.topLeft.x ?? 0;
+    double adjustedProgressBarWidth = mainContainerWidth - (2 * borderRadiusValue);
+
     return SlideTransition(
       position: widget._offsetAnimation,
       child: Dismissible(
         key: widget.uniqueKey,
-        direction: widget.isDismissable
-            ? widget.dismissDirection
-            : DismissDirection.none,
+        direction: widget.isDismissable ? widget.dismissDirection : DismissDirection.none,
         onDismissed: (direction) {
           widget.onDismiss?.call();
           widget.closeOverlay();
         },
         child: InkWell(
           onTap: widget.onNotificationPressed,
-          child: Container(
-            width: widget.width ?? MediaQuery.of(context).size.width * 0.7,
-            height: widget.height ?? MediaQuery.of(context).size.height * 0.12,
-            decoration: BoxDecoration(
-              borderRadius: widget.borderRadius ?? BorderRadius.circular(5.0),
-              border: widget.border,
-              color: widget.background,
-              boxShadow: [
-                widget.shadow ?? const BoxShadow(),
-              ],
-            ),
-            child: Column(
-              children: [
-                Expanded(
-                  child: ToastContent(
-                    title: widget.title,
-                    description: widget.description,
-                    notificationType: widget._notificationType,
-                    icon: widget.icon,
-                    displayCloseButton: widget.onNotificationPressed == null
-                        ? widget.displayCloseButton
-                        : false,
-                    closeButton: widget.closeButton,
-                    onCloseButtonPressed: closeNotification,
-                    iconSize: widget.iconSize,
-                    action: widget.action,
-                  ),
-                ),
-                if (widget.showProgressIndicator)
-                  Padding(
-                    padding:
-                        widget.progressBarPadding ?? const EdgeInsets.all(0),
-                    child: SizedBox(
-                      width: widget.progressBarWidth,
-                      height: widget.progressBarHeight,
-                      child: AnimatedProgressBar(
-                        foregroundColor: widget.progressIndicatorColor,
-                        duration: widget.toastDuration,
-                        backgroundColor: widget.progressIndicatorBackground,
+          child: Material(
+            elevation: 10,
+            borderRadius: widget.borderRadius ?? BorderRadius.circular(5.0),
+            child: Container(
+              width: mainContainerWidth,
+              height: mainContainerHeight,
+              decoration: BoxDecoration(
+                borderRadius: widget.borderRadius ?? BorderRadius.circular(5.0),
+                border: widget.border,
+                color: widget.background,
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 20),
+                      child: ToastContent(
+                        title: widget.title,
+                        description: widget.description,
+                        notificationType: widget._notificationType,
+                        icon: widget.icon,
+                        displayCloseButton: widget.onNotificationPressed == null ? widget.displayCloseButton : false,
+                        closeButton: widget.closeButton,
+                        onCloseButtonPressed: closeNotification,
+                        iconSize: widget.iconSize,
+                        action: widget.action,
                       ),
                     ),
                   ),
-              ],
+                  if (widget.showProgressIndicator)
+                    Padding(
+                      padding: widget.progressBarPadding ?? const EdgeInsets.all(0),
+                      child: SizedBox(
+                        width: widget.progressBarWidth ?? adjustedProgressBarWidth,
+                        height: widget.progressBarHeight,
+                        child: AnimatedProgressBar(
+                          foregroundColor: widget.progressIndicatorColor,
+                          duration: widget.toastDuration,
+                          backgroundColor: widget.progressIndicatorBackground,
+                        ),
+                      ),
+                    ),
+                ],
+              ),
             ),
           ),
         ),
